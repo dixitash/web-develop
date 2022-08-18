@@ -1,0 +1,46 @@
+<?php
+$conn=mysqli_connect("localhost","root","","student") or die("check the connection");
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+	$class_id=$_POST["class"];
+	$students=$_POST["student"];
+	$sql="insert into tbl_students (class_id,student) value ('$class_id','$students')";
+	$query=mysqli_query($conn,$sql) or die ("check the connection");
+	echo "data inserted";
+}
+?>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body>
+
+<div class="container bg-3">
+	<div class="container">
+			<div class="col-sm-2"></div>
+				<div class="col-sm-6"> 
+
+			  <h2>basic form</h2>
+			  <form action="" method="POST" enctype="multipart/form-data">
+			  <div class="form-group">
+				   <label for="username">std_id:</label>
+				  <input type="name" class="form-control" id="user" placeholder="Enter email" name="class">
+				  <span id="error_user"></span> 
+				  <label for="username">student:</label>
+				  <input type="name" class="form-control" id="user" placeholder="Enter email" name="student">
+				  <span id="error_user"></span>
+				</div>
+				<button type="submit" class="bn39"><span class="bn39span">submit</span></button>
+				  </form>
+			</div>
+	</div>
+</div>
+</body>
+</html>

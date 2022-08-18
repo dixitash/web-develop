@@ -1,0 +1,43 @@
+<?php
+$conn=mysql_connect("localhost","root","","news") or die ("check the connection");
+$sql = SELECT * FROM basic_news;
+$query = mysqli_query($conn,$sql);
+$total = mysqli_num_rows($query);
+$result=mysqli_fetch_array($query)
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <?php
+
+   ?>
+   
+   
+   <div class="container-fluid">
+     <table class="table table-striped">
+	 <thead>
+			<tr>
+				<th>ID</th>
+				<th> NEWS </th>
+				<th> DATE </th>
+				<th> TIME </th>
+				
+				
+				<th>Action <a href="news.php">ADD</a></th>
+			</tr>
+	</thead>
+    <tbody>
+	<td><?php echo $id++; ?></td>
+		<td><?php echo  $result['news']; ?></td>
+		<td><?php echo  $result['dates']; ?></td>
+		<td><?php  echo  $result['timeds']; ?></td>
+	
+</head>
+<body>

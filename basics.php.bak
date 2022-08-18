@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<?php
+$a=10;
+$b=20;
+/*$c=$a+$b;
+echo "the sum is:".$c;*/
+//echo var_dump($a);
+[$a,$b] = [$b,$a];
+echo $a."<br>";
+echo $b."<br>";
+
+
+
+?>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?php
+$conn=mysqli_connect("localhost","root","","mydbs") or die("check the connection");
+$id=$_GET['id'];
+$sql="DELETE FROM TBL_STUDENT WHERE id = '$id'";
+echo $query = mysqli_query($conn,$sql) or die ("QUERY UNSUCCESSFULL.");
+
+header("location:dataview.php")
+
+
+
+
+
+?>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BASIC PHP</title>
+</head>
+<body>
+<?php
+$a=1;
+//$b=300;
+//echo $a*$b;
+// aritmatic operator
+	/*string
+	integer
+	float
+	boolean
+	array
+	object
+	null*/
+// show the value data type (echo var_dump($a);)
+	
+	// pattern loop in php
+	
+	
+	for($a=1; $a<=5; $a++){
+		echo "<br>";
+		
+		for($j=1; $j<=$a; $j++){
+			echo "*";
+		}
+	}
+	
+?>
+</body>
+</html>
